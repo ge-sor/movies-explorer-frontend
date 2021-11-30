@@ -1,0 +1,30 @@
+@media screen and (min-width: 320px) {
+    .app {
+        /*min-width: 320px;*/
+        /*max-width: 1280px;*/
+
+        margin: 0 auto;
+        height: 100vh;
+        width: 100vw;
+        max-height: 100vh;
+        max-width: 100vw;
+        box-sizing: border-box;
+        background: #202020;
+        display: flex;
+
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .app {
+
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .app {
+
+
+    }
+}
