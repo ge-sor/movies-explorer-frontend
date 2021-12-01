@@ -20,3 +20,12 @@
 @import url('./components/SavedMovies/SavedMovies.css');
 @import url('./components/SearchForm/SearchForm.css');
 @import url('./components/Techs/Techs.css');
+@import url('./vendor/fonts/fonts.css');
+
+#root {
+    margin: 0;
+    font-family: 'Inter', 'Helvetica', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #fff;
+}

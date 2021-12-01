@@ -1,5 +1,24 @@
 @media screen and (min-width: 320px) {
     .header {
+    display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 21px 70px;
+    }
+
+    .header__list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+    }
+
+    .header__item {
+        text-decoration: none;
+    }
+
+    .header__link {
 
     }
 }

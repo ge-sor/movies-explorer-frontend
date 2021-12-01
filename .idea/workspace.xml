@@ -2,55 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d37dbc5-c7ce-41d6-98c0-10e4d159395d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/AboutMe/AboutMe.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AboutMe/AboutMe.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AboutProject/AboutProject.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AboutProject/AboutProject.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/App/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/App/App.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/FilterCheckbox/FilterCheckbox.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/FilterCheckbox/FilterCheckbox.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Footer/Footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Footer/Footer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Login/Login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Login/Login.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Main/Main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Main/Main.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Movies/Movies.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Movies/Movies.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MoviesCard/MoviesCard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MoviesCard/MoviesCard.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MoviesCardList/MoviesCardList.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MoviesCardList/MoviesCardList.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NavTab/NavTab.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NavTab/NavTab.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Portfolio/Portfolio.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Portfolio/Portfolio.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Preloader/Preloader.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Preloader/Preloader.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/Profile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Promo/Promo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Promo/Promo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Register/Register.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Register/Register.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SavedMovies/SavedMovies.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SavedMovies/SavedMovies.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SearchForm/SearchForm.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SearchForm/SearchForm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Techs/Techs.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Techs/Techs.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vendor/normalize.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,16 +30,37 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/projects/php/rudn_web" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/vendor/fonts" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/movies-explorer/src" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -93,6 +72,8 @@
       <updated>1637825354857</updated>
       <workItem from="1637825356901" duration="1690000" />
       <workItem from="1638251992618" duration="2699000" />
+      <workItem from="1638261158089" duration="7855000" />
+      <workItem from="1638363454933" duration="6689000" />
     </task>
     <servers />
   </component>
