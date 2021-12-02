@@ -21,6 +21,11 @@
 @import url('./components/SearchForm/SearchForm.css');
 @import url('./components/Techs/Techs.css');
 @import url('./vendor/fonts/fonts.css');
+@import url('./components/Generic/Button.css');
+@import url('./components/Generic/Content.css');
+@import url('./components/Generic/Section.css');
+@import url('./components/Generic/SectionTitle.css');
+@import url('./components/Generic/LargeTitle.css');
 
 #root {
     margin: 0;
@@ -28,4 +33,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #fff;
+    background: #202020;
+}
+
+.globe {
+    overflow: visible;
 }

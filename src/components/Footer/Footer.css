@@ -1,6 +1,45 @@
 @media screen and (min-width: 320px) {
     .footer {
+        background: #202020;
 
+    }
+    .footer__content {
+        padding: 80px 70px 20px;
+        display: flex;
+        align-items: center;
+    }
+    .footer__text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 16px;
+        text-align: center;
+        color: #8B8B8B;
+        width: 100%;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #424242;
+    }
+    .footer__container {
+    display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .footer__year {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 16px;
+    }
+    .footer__links {
+    display: flex;
+        gap: 20px;
+    }
+    .footer__link {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 16px;
+        cursor: pointer;
     }
 }
 

@@ -1,7 +1,93 @@
 @media screen and (min-width: 320px) {
     .about-project {
+        box-sizing: border-box;
+        background: #202020;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-project__content {
+        padding: 110px 70px;
+    }
+
+    .about-project__title {
 
     }
+
+    .about-project__texts {
+        display: flex;
+        flex-direction: row;
+        padding-top: 70px;
+    }
+
+    .about-project__text-container {
+        width: 50%;
+
+    }
+    .about-project__subtitle {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: -0.04em;
+        margin: 0;
+
+    }
+    .about-project__paragraph {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        margin: 0;
+        padding-top: 26px;
+    }
+    .about-project__progress {
+        padding-top: 110px;
+        display: flex;
+        flex-direction: row;
+
+    }
+    .about-project__progress-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-project__progress-block_backend {
+        width: 25%;
+    }
+    .about-project__progress-block_frontend {
+        width: 75%;
+    }
+    .about-project__progress-weeks_backend {
+        color: #000;
+        background: #3DDC84;
+    }
+    .about-project__progress-weeks_frontend {
+        background: #303030;
+    }
+    .about-project__progress-weeks {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 9px 0;
+        width: 100%;
+    }
+    .about-project__progress-description {
+        padding-top: 14px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #8B8B8B;
+    }
+
 }
 
 @media screen and (min-width: 768px) {

@@ -2,13 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d37dbc5-c7ce-41d6-98c0-10e4d159395d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/images/arrow-link.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/globe.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/globe.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/like-off.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/like-on.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/person.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/search.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/switch-off.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/switch-on.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,13 +36,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/images" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/images" />
       <recent name="$PROJECT_DIR$/src/vendor/fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -74,6 +81,8 @@
       <workItem from="1638251992618" duration="2699000" />
       <workItem from="1638261158089" duration="7855000" />
       <workItem from="1638363454933" duration="6689000" />
+      <workItem from="1638423724196" duration="3438000" />
+      <workItem from="1638427333310" duration="2623000" />
     </task>
     <servers />
   </component>
