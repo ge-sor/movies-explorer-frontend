@@ -3,7 +3,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
 const SavedMovies = () => {
-    return <section className={'saved-movies'}>
+    return <section className={'saved-movies section'}>
         <Header/>
         <Footer/>
     </section>

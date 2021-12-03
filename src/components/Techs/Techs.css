@@ -49,6 +49,8 @@
         width: 90px;
         border-radius: 10px;
         background: #303030;
+        cursor: default;
+        user-select: none;
     }
 }
 

@@ -18,7 +18,7 @@ const Promo = () => {
         </div>
         <Globe/>
         </div>
-            <button className={'promo__button'}>Узнать больше</button>
+            <button className={'promo__button button'}>Узнать больше</button>
         </div>
     </section>
 }

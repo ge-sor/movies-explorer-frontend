@@ -127,15 +127,33 @@
         line-height: 16px;
     }
 
+
+    .header__logo-link {
+        margin-right: 140px;
+    }
     .header__item {
         text-decoration: none;
     }
 
     .header__link {
-        cursor: pointer;
+
     }
 
     .header__link_active {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .header__link_secondary {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .header__link_primary {
         color: #000;
         background: #3DDC84;
         border-radius: 3px;

@@ -1,0 +1,12 @@
+.link {
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    color: #fff;
+}
+.link:hover {
+    filter: opacity(.7);
+}
+.link:active {
+    filter: opacity(.6);
+}

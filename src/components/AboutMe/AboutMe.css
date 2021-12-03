@@ -3,7 +3,7 @@
         background: #202020;
     }
     .about-me__content {
-        padding: 110px 70px 105px;
+        padding: 110px 70px 100px;
 
     }
     .about-me__title {
@@ -49,36 +49,7 @@
         object-fit: cover;
         border-radius: 10px;
     }
-    .about-me__portfolio {
-width: 100%;
-        padding-top: 100px;
-    }
-    .about-me__portfolio-title {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 20px;
-        color: #8B8B8B;
-        mix-blend-mode: normal;
-        margin: 0;
-        padding-bottom: 50px;
-    }
-    .about-me__portfolio-link {
-        display: flex;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 30px;
-        line-height: 50px;
-        letter-spacing: -0.04em;
-        padding: 20px 0;
-        border-bottom: 1px solid #424242;
-        cursor: pointer;
-        background: url('../../images/arrow-link.svg') no-repeat;
-        background-position: right 0 top 50%;
-    }
-    .about-me__portfolio-link:last-child {
-        border: none;
-    }
+
 }
 
 @media screen and (min-width: 768px) {
