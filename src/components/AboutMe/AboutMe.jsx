@@ -25,11 +25,15 @@ const AboutMe = () => {
                         Fusce interdum sagittis rhoncus.
                     </p>
                     <div className={'about-me__links'}>
-                        <a className={'about-me__link link'}>Facebook</a>
-                        <a className={'about-me__link link'}>Github</a>
+                        <a href={'https://www.facebook.com/gesrr'} className={'about-me__link link'} rel="noreferrer" target="_blank">
+                            Facebook
+                        </a>
+                        <a href={'https://github.com/ge-sor'} className={'about-me__link link'} rel="noreferrer" target="_blank">
+                            Github
+                        </a>
                     </div>
                 </div>
-                <img className={'about-me__photo'} alt={'my photo'} src={myPhoto}/>
+                <img className={'about-me__photo'} alt={'avatar'} src={myPhoto}/>
             </div>
 
 

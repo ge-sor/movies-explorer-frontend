@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react'
 import Globe from "../../images/globe";
+import {scrollTo} from "../../utils/scrollTo";
 
 const Promo = () => {
 
@@ -13,12 +14,20 @@ const Promo = () => {
         <div className={'promo__content content'}>
         <div className={'promo__container'}>
         <div className={'promo__text'}>
-        <h1 className={'promo__title large-title'}>Учебный проект студента факультета Веб-разработки.</h1>
-        <p className={'promo__subtitle'}>Листайте ниже, чтобы узнать больше про этот проект и его создателя.</p>
+        <h1 className={'promo__title large-title'}>
+            Учебный проект студента факультета Веб-разработки.
+        </h1>
+        <p className={'promo__subtitle'}>
+            Листайте ниже, чтобы узнать больше про этот проект и его создателя.
+        </p>
         </div>
         <Globe/>
         </div>
-            <button className={'promo__button button'}>Узнать больше</button>
+            <button
+                className={'promo__button button'}
+                onClick={() => scrollTo('.about-project')}>
+                Узнать больше
+            </button>
         </div>
     </section>
 }

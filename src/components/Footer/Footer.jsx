@@ -10,15 +10,33 @@ const Footer = () => {
 
     return <section className={'footer section'}>
         <div className={'footer__content content'}>
-        <h4 className={'footer__text'}>Учебный проект Яндекс.Практикум х BeatFilm.</h4>
-        <div className={'footer__container'}>
-            <p className={'footer__year'}>© {Year()}</p>
-            <div className={'footer__links'}>
-                <a className={'footer__link link'}>Яндекс.Практикум</a>
-                <a className={'footer__link link'}>Github</a>
-                <a className={'footer__link link'}>Facebook</a>
+            <h4 className={'footer__text'}>Учебный проект Яндекс.Практикум х BeatFilm.</h4>
+            <div className={'footer__container'}>
+                <p className={'footer__year'}>© {Year()}</p>
+                <div className={'footer__links'}>
+                    <a
+                        href={'https://practicum.yandex.ru'}
+                        className={'footer__link link'}
+                        target="_blank"
+                        rel="noreferrer">
+                        Яндекс.Практикум
+                    </a>
+                    <a
+                        href={'https://github.com/ge-sor'}
+                        className={'footer__link link'}
+                        target="_blank"
+                        rel="noreferrer">
+                        Github
+                    </a>
+                    <a
+                        href={'https://www.facebook.com/gesrr'}
+                        className={'footer__link link'}
+                        target="_blank"
+                        rel="noreferrer">
+                        Facebook
+                    </a>
+                </div>
             </div>
-        </div>
         </div>
     </section>
 }

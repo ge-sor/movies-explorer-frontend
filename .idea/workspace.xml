@@ -2,25 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d37dbc5-c7ce-41d6-98c0-10e4d159395d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Base/Button.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/scrollTo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AboutMe/AboutMe.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutMe/AboutMe.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/AboutMe/AboutMe.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutMe/AboutMe.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AboutProject/AboutProject.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutProject/AboutProject.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AboutProject/AboutProject.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutProject/AboutProject.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Generic/Button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Base/Link.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Generic/Content.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Base/Content.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Generic/LargeTitle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Base/LargeTitle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Generic/Section.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Base/Section.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Generic/SectionTitle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Base/SectionTitle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Movies/Movies.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Movies/Movies.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Movies/Movies.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Movies/Movies.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Portfolio/Portfolio.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Portfolio/Portfolio.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Portfolio/Portfolio.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Portfolio/Portfolio.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Promo/Promo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Promo/Promo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SavedMovies/SavedMovies.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SavedMovies/SavedMovies.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Techs/Techs.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Techs/Techs.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +37,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/projects/php/rudn_web" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -90,6 +85,7 @@
       <workItem from="1638423724196" duration="3438000" />
       <workItem from="1638427333310" duration="2623000" />
       <workItem from="1638509969953" duration="3822000" />
+      <workItem from="1638818333462" duration="1868000" />
     </task>
     <servers />
   </component>

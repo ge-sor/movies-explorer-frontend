@@ -1,11 +1,6 @@
 @media screen and (min-width: 320px) {
     .about-project {
-        box-sizing: border-box;
         background: #202020;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
 
     .about-project__content {

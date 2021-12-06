@@ -1,5 +1,51 @@
 @media screen and (min-width: 320px) {
     .movies {
+        background: #202020;
+    }
+    .movies__content {
+        padding: 140px 70px 0;
+    }
+    .movies__search-container {
+
+    }
+    .movies__form {
+        height: 72px;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        background: #222222;
+        box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
+        border-radius: 9px;
+
+    }
+    .movies__input {
+        width: 80%;
+        height: 100%;
+        background: transparent;
+        border: none;
+        color: #fff;
+    }
+    .movies__input:focus {
+        outline: none;
+    }
+
+    .movies__search-button {
+        background: #4285F4;
+        border-radius: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 10px;
+        border: none;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 18px;
+        color: #fff;
+    }
+    .movies__toggle {
 
     }
 }
