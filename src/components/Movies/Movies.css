@@ -14,7 +14,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
         background: #222222;
         box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
         border-radius: 9px;
@@ -23,7 +23,8 @@
     .movies__input {
         width: 80%;
         height: 100%;
-        background: transparent;
+        padding-left: 63px;
+        background: url("../../images/search.svg") no-repeat top 19px left 19px;
         border: none;
         color: #fff;
     }
@@ -44,10 +45,27 @@
         font-size: 11px;
         line-height: 18px;
         color: #fff;
+        margin: 0 19px;
+    }
+    .movies__toggle-container {
+        display: flex;
+        align-items: center;
+        padding-left: 29px;
+        border-left: 1px solid #505050;
+        box-sizing: border-box;
+        height: 40px;
     }
     .movies__toggle {
 
     }
+    .movies__toggle-span {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 18px;
+        margin: 0 30px 0 14px;
+    }
+
 }
 
 @media screen and (min-width: 768px) {
