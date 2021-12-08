@@ -31,7 +31,7 @@ const Movies = () => {
                             className={'movies__search-button button'}
                             value={'Найти'}/>
                         <div className={'movies__toggle-container'}>
-                            <img
+                            <img draggable={"false"}
                                 className={'movies__toggle button'}
                                 src={addShorts ? ToggleOn : ToggleOff}
                                 alt={'toggle'}

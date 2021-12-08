@@ -10,7 +10,7 @@
     }
     .movies__form {
         height: 72px;
-        margin: 0;
+        margin: 0 0 70px 0;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -18,7 +18,6 @@
         background: #222222;
         box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
         border-radius: 9px;
-
     }
     .movies__input {
         width: 80%;
