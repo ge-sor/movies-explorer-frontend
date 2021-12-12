@@ -17,8 +17,8 @@ const Techs = () => {
                     На курсе веб-разработки мы освоили технологии, которые применили в дипломном проекте.
                 </p>
                 <div className={'techs__row'}>
-                    {techs.map((item) => {
-                        return <div className={'techs_item'}>{item}</div>
+                    {techs.map((item, index) => {
+                        return <div key={index} className={'techs_item'}>{item}</div>
                     })}
                 </div>
             </div>

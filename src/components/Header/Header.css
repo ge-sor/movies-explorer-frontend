@@ -1,104 +1,3 @@
-@keyframes translate1 {
-    0% {
-        -webkit-transform: translate(0px, 0px);
-        -moz-transform: translate(0px, 0px);
-        -ms-transform: translate(0px, 0px);
-        -o-transform: translate(0px, 0px);
-        transform: translate(0px, 0px);
-    }
-    25% {
-        -webkit-transform: translate(10px, 0);
-        -moz-transform: translate(10px, 0);
-        -ms-transform: translate(10px, 0);
-        -o-transform: translate(10px, 0);
-        transform: translate(10px, 0);
-    }
-    50% {
-        -webkit-transform: translate(10px, 10px);
-        -moz-transform: translate(10px, 10px);
-        -ms-transform: translate(10px, 10px);
-        -o-transform: translate(10px, 10px);
-        transform: translate(10px, 10px);
-    }
-    75% {
-        -webkit-transform: translate(0, 10px);
-        -moz-transform: translate(0, 10px);
-        -ms-transform: translate(0, 10px);
-        -o-transform: translate(0, 10px);
-        transform: translate(0, 10px);
-    }
-    100% {
-        -webkit-transform: translate(0, 0);
-        -moz-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
-        -o-transform: translate(0, 0);
-        transform: translate(0, 0);
-    }
-}
-
-@keyframes translate2 {
-    0% {
-        -webkit-transform: translate(-5px, -5px);
-        -moz-transform: translate(-5px, -5px);
-        -ms-transform: translate(-5px, -5px);
-        -o-transform: translate(-5px, -5px);
-        transform: translate(-5px, -5px);
-    }
-    25% {
-        -webkit-transform: translate(-10px, -5);
-        -moz-transform: translate(-10px, -5);
-        -ms-transform: translate(-10px, -5);
-        -o-transform: translate(-10px, -5);
-        transform: translate(-10px, -5);
-    }
-    50% {
-        -webkit-transform: translate(-10px, -10px);
-        -moz-transform: translate(-10px, -10px);
-        -ms-transform: translate(-10px, -10px);
-        -o-transform: translate(-10px, -10px);
-        transform: translate(-10px, -10px);
-    }
-    75% {
-        -webkit-transform: translate(-5, -10px);
-        -moz-transform: translate(-5, -10px);
-        -ms-transform: translate(-5, -10px);
-        -o-transform: translate(-5, -10px);
-        transform: translate(-5, -10px);
-    }
-    100% {
-        -webkit-transform: translate(-5px, -5px);
-        -moz-transform: translate(-5px, -5px);
-        -ms-transform: translate(-5px, -5px);
-        -o-transform: translate(-5px, -5px);
-        transform: translate(-5px, -5px);
-    }
-}
-
-.globe1 {
-    animation: translate1 10s linear infinite;
-}
-.globe2 {
-    animation: translate2 11s linear infinite;
-}
-.globe3 {
-    animation: translate1 12s linear infinite reverse;
-}
-.globe4 {
-    animation: translate2 13s linear infinite reverse;
-}
-.globe5 {
-    animation: translate1 14s linear infinite alternate;
-}
-.globe6 {
-    animation: translate2 15s linear infinite alternate;
-}
-.globe7 {
-    animation: translate1 16s linear infinite alternate-reverse;
-}
-.globe0 {
-    animation: translate2 17s linear infinite alternate-reverse;
-}
-
 @media screen and (min-width: 320px) {
     .header {
     display: flex;
@@ -138,6 +37,24 @@
     .header__link {
 
     }
+    .header__link_account {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        width: 170px;
+        justify-content: flex-end;
+    }
+    .header__account-logo {
+        width: 12px;
+        height: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 7px;
+        border-radius: 50%;
+        background:  #313131;
+        object-fit: contain;
+    }
 
     .header__link_active {
         font-style: normal;
@@ -160,6 +77,45 @@
         padding: 8px 20px;
     }
 
+    .header__burger {
+        display: none;
+    }
+    .header__burger:checked + label div:first-child {
+        top: 10px;
+        transform: rotateZ(45deg);
+    }
+    .header__burger:checked + label div:last-child {
+        top: -4px;
+        right: -4px;
+        transform: rotateZ(45deg);
+    }
+    .header__burger:checked + label div:nth-child(2) {
+        width: 30px;
+        top: 3px;
+        right: 0;
+        transform: rotateZ(-45deg);
+    }
+
+
+    .header__burger-label {
+        display: block;
+        width: 26px;
+        height: 26px;
+        margin:  0;
+        cursor: pointer;
+    }
+    .header__burger-label:before {
+        content: "";
+    }
+    .header__burger-label div {
+        position: relative;
+        top: 1px;
+        height: 3px;
+        background-color: #fff;
+        margin-bottom: 6px;
+        transition: 0.3s ease-in-out all;
+        border-radius: 1px;
+    }
 
 }
 

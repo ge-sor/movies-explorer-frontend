@@ -20,12 +20,12 @@
 @import url('./components/MoviesCardList/MoviesCardList.css');
 @import url('./components/Navigation/Navigation.css');
 @import url('./components/NavTab/NavTab.css');
+@import url('./components/NotFound/NotFound.css');
 @import url('./components/Portfolio/Portfolio.css');
 @import url('./components/Preloader/Preloader.css');
 @import url('./components/Profile/Profile.css');
 @import url('./components/Promo/Promo.css');
 @import url('./components/Register/Register.css');
-@import url('./components/SavedMovies/SavedMovies.css');
 @import url('./components/SearchForm/SearchForm.css');
 @import url('./components/Techs/Techs.css');
 @import url('./vendor/fonts/fonts.css');

@@ -1,0 +1,43 @@
+@media screen and (min-width: 320px) {
+    .not-found {
+
+    }
+    .not-found__content {
+        align-items: center;
+        padding-top: 246px;
+    }
+    .not-found__title {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 140px;
+        line-height: 169px;
+        margin: 0;
+    }
+    .not-found__subtitle {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        padding-top: 5px;
+    }
+    .not-found__link {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: #4285F4;
+        padding-top: 184px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .not-found {
+
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .not-found {
+
+    }
+}

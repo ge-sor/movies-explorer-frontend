@@ -3,8 +3,9 @@ import Register from "../Register/Register";
 import Main from "../Main/Main";
 import Movies from "../Movies/Movies";
 import Profile from "../Profile/Profile";
-import SavedMovies from "../SavedMovies/SavedMovies";
 import {Route, Routes} from "react-router-dom";
+import Login from "../Login/Login";
+import NotFound from "../NotFound/NotFound";
 
 const App = () => {
 
@@ -12,10 +13,11 @@ const App = () => {
         <Routes>
             <Route path='/' element={<Main/>}/>
             <Route path='/signup' element={<Register/>}/>
-            <Route path='/signin' element={<Main/>}/>
+            <Route path='/signin' element={<Login/>}/>
             <Route path='/profile' element={<Profile/>}/>
-            <Route path='/movies' element={<Movies/>}/>
-            <Route path='/saved-movies' element={<SavedMovies/>}/>
+            <Route path='/movies' element={<Movies isSavedMovies={false}/>}/>
+            <Route path='/saved-movies' element={<Movies isSavedMovies={true}/>}/>
+            <Route path='/not-found' element={<NotFound/>}/>
         </Routes>
     </div>
 }

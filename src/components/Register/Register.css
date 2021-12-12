@@ -1,6 +1,120 @@
 @media screen and (min-width: 320px) {
     .register {
+        background: #202020;
+    }
 
+    .register__content {
+        padding: 70px 0 0;
+        align-items: start;
+        width: 396px;
+    }
+
+    .register__title {
+        margin: 40px 0;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .register__logo {
+
+    }
+
+    .register__logo-link {
+
+    }
+
+    .register__form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+    }
+
+    .register__input {
+        background: #202020;
+        color: #fff;
+        padding: 10px 0;
+        width: 100%;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        border: none;
+        border-bottom: 1px solid #424242;
+        margin-bottom: 24px;
+    }
+
+    .register__input:focus {
+        outline: none;
+    }
+
+    .register__input:focus + label,
+    .register__input:valid + label {
+        font-size: 10px;
+        transform: translateY(-20px);
+    }
+
+    .register__input-container {
+        display: flex;
+        position: relative;
+        width: 100%;
+    }
+
+    .register__input_email {
+
+    }
+
+    .register__input_password {
+
+    }
+
+    .register__label {
+        display: block;
+        transition: 0.5s;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        color: #8B8B8B;
+    }
+
+    .register__submit {
+        background: #4285F4;
+        border-radius: 3px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 13px 0 15px;
+        margin: 152px 0 31px;
+        border: none;
+        color: #fff;
+    }
+    .register__login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 6px;
+    }
+    .register__login-text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: #8B8B8B;
+    }
+
+    .register__login-link {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: #4285F4;
     }
 }
 
