@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9d37dbc5-c7ce-41d6-98c0-10e4d159395d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AboutMe/AboutMe.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutMe/AboutMe.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AboutProject/AboutProject.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutProject/AboutProject.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AboutProject/AboutProject.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutProject/AboutProject.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Promo/Promo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Promo/Promo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Promo/Promo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Promo/Promo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/globe.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/globe.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/globe.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +75,7 @@
       <workItem from="1638509969953" duration="3822000" />
       <workItem from="1638818333462" duration="1868000" />
       <workItem from="1638884648458" duration="3278000" />
+      <workItem from="1639418647391" duration="1473000" />
     </task>
     <servers />
   </component>
