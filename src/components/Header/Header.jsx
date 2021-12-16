@@ -14,7 +14,7 @@ const Header = () => {
             <img className={'header__logo button'} alt={'Logo'} src={Logo}/>
         </Link>
         {pathname !== '/'
-        && <><ul className={'header__list'}>
+        && <><ul className={menuOpened ? 'header__list header__list_first header__list_visible' : 'header__list header__list_first header__list_hidden'}>
             <li className={'header__item'}>
                 <Link to={'/movies'}
                       className={`header__link link button ${pathname === '/movies'
@@ -33,24 +33,8 @@ const Header = () => {
             </li>
         </ul>
 
-            <input
-                className={'header__burger'}
-                type={'checkbox'}
-                id={'menu_checkbox'}
-                checked={menuOpened}
-                onChange={() => {
-                    setMenuOpened(!menuOpened)
-                    console.log(menuOpened)
-                }}/>
-            <label htmlFor={'menu_checkbox'} className={'header__burger-label'}>
-                <div/>
-                <div/>
-                <div/>
-            </label>
-
-
             </>}
-        <ul className={'header__list'}>
+        <ul className={menuOpened ? 'header__list header__list-second header__list_visible' : 'header__list header__list_second header__list_hidden'}>
             {pathname === '/saved-movies' || pathname === '/movies'
                 ? <li className={'header__item'}>
                     <Link
@@ -76,8 +60,21 @@ const Header = () => {
                         </Link>
                     </li>
                 </>}
-
         </ul>
+        <input
+            className={'header__burger'}
+            type={'checkbox'}
+            id={'menu_checkbox'}
+            checked={menuOpened}
+            onChange={() => {
+                setMenuOpened(!menuOpened)
+                console.log(menuOpened)
+            }}/>
+        <label htmlFor={'menu_checkbox'} className={'header__burger-label'}>
+            <div/>
+            <div/>
+            <div/>
+        </label>
     </nav>
 }
 export default Header
