@@ -7,13 +7,13 @@ const Portfolio = () => {
             Портфолио
         </h5>
         <a href={'https://github.com/ge-sor/how-to-learn'} className={'portfolio-link link'} target="_blank" rel="noreferrer">
-            Статичный сайт
+            Статичный сайт <span className={'portfolio-link__span'}>↗</span>
         </a>
         <a href={'https://github.com/ge-sor/russian-travel'} className={'portfolio-link link'} target="_blank" rel="noreferrer">
-            Адаптивный сайт
+            Адаптивный сайт <span className={'portfolio-link__span'}>↗</span>
         </a>
         <a href={'https://github.com/ge-sor/react-mesto-api-full'} className={'portfolio-link link'} target="_blank" rel="noreferrer">
-            Одностраничное приложение
+            Одностраничное приложение <span className={'portfolio-link__span'}>↗</span>
         </a>
         </div>
     </section>
