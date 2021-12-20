@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import Logo from '../../images/logo.svg'
 import Person from '../../images/person.svg'
 import {Link, useLocation} from "react-router-dom";
@@ -9,15 +9,50 @@ const Header = ({loggedIn}) => {
 
     const [menuOpened, setMenuOpened] = useState(false)
 
-    return <nav className={'header'}>
+    useEffect(() => {
+        function handleResize() {
+            if (document.body.clientWidth > 1280) {
+                setMenuOpened(false);
+            }
+        }
+        document.addEventListener("resize", handleResize);
+        return () => {
+            document.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
+    function useOutsideAlerter(ref) {
+        useEffect(() => {
+            function handleClickOutside(event) {
+                if (ref.current && !ref.current.contains(event.target)) {
+                    setMenuOpened(false);
+                }
+            }
+            document.addEventListener("mousedown", handleClickOutside);
+            return () => {
+                document.removeEventListener("mousedown", handleClickOutside);
+            };
+        }, [ref]);
+    }
+
+    const wrapperRef = useRef(null);
+    useOutsideAlerter(wrapperRef);
+
+    return <nav className={menuOpened ? 'header header_opened' : 'header'}>
         <Link to={'/'} className={'header__logo-link'}>
             <img className={'header__logo button'} alt={'Logo'} src={Logo}/>
         </Link>
         {loggedIn ? <>
-                <ul className={menuOpened
-                    ? 'header__list header__list_first header__list_visible'
-                    : 'header__list header__list_first header__list_hidden'}>
-                    <li className={'header__item'}>
+                <ul ref={wrapperRef}  className={menuOpened
+                    ? 'header__list header__list_logged-in header__list_visible'
+                    : 'header__list header__list_logged-in header__list_hidden'}>
+                    <li  className={'header__item header__item_main'}>
+                        <Link to={'/'}
+                              className={`header__link link button`}>
+                            Главная
+                        </Link>
+                    </li>
+                    <li  className={'header__item'}>
                         <Link to={'/movies'}
                               className={`header__link link button ${pathname === '/movies'
                                   ? 'header__link_active'
@@ -33,10 +68,6 @@ const Header = ({loggedIn}) => {
                             Сохранённые фильмы
                         </Link>
                     </li>
-                </ul>
-                <ul className={menuOpened
-                    ? 'header__list header__list_first header__list_visible'
-                    : 'header__list header__list_first header__list_hidden'}>
                     <li className={'header__item'}>
                         <Link
                             to={'/profile'}
@@ -61,7 +92,7 @@ const Header = ({loggedIn}) => {
                     <div/>
                 </label>
             </> :
-            <ul className={'header__list header__list_second'}>
+            <ul className={'header__list header__list_logged-out'}>
                 <li className={'header__item'}>
                     <Link
                         to={'/signup'}

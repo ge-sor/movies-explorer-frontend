@@ -10,7 +10,7 @@ import Footer from "../Footer/Footer";
 const Main = () => {
 
     return <>
-        <Header/>
+        <Header loggedIn={true}/>
         <Promo/>
         <AboutProject/>
         <Techs/>
