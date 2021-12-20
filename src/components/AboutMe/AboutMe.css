@@ -73,6 +73,12 @@
          padding: 90px 50px;
 
      }
+     .about-me__paragraph {
+         max-width: 45vw;
+         font-size: 12px;
+         line-height: 18px;
+         padding-bottom: 87px;
+     }
  }
 
  @media screen and (max-width: 768px) {
@@ -94,5 +100,11 @@
      .about-me__photo {
          height: 352px;
          width: 292px;
+     }
+     .about-me__paragraph {
+         max-width: 90vw;
+         font-size: 11px;
+         line-height: 16px;
+         padding-bottom: 40px;
      }
  }
