@@ -9,22 +9,11 @@ const Header = ({loggedIn}) => {
 
     const [menuOpened, setMenuOpened] = useState(false)
 
-    useEffect(() => {
-        function handleResize() {
-            if (document.body.clientWidth > 1280) {
-                setMenuOpened(false);
-            }
-        }
-        document.addEventListener("resize", handleResize);
-        return () => {
-            document.removeEventListener("resize", handleResize);
-        };
-    }, []);
-
-    function useOutsideAlerter(ref) {
+    function useClickOutside(ref) {
         useEffect(() => {
             function handleClickOutside(event) {
-                if (ref.current && !ref.current.contains(event.target)) {
+                if (!ref.current.contains(event.target) && menuOpened) {
+                    console.log(1)
                     setMenuOpened(false);
                 }
             }
@@ -36,7 +25,24 @@ const Header = ({loggedIn}) => {
     }
 
     const wrapperRef = useRef(null);
-    useOutsideAlerter(wrapperRef);
+    useClickOutside(wrapperRef);
+
+    useEffect(() => {
+        function handleResize() {
+            console.log(document.body.clientWidth)
+            if (document.body.clientWidth > 1280 && menuOpened) {
+                setMenuOpened(false);
+            }
+        }
+        document.addEventListener("resize", handleResize);
+        return () => {
+            document.removeEventListener("resize", handleResize);
+        };
+    }, [menuOpened]);
+
+    useEffect(() => {
+        console.log(menuOpened)
+    }, [menuOpened]);
 
     return <nav className={menuOpened ? 'header header_opened' : 'header'}>
         <Link to={'/'} className={'header__logo-link'}>
@@ -48,7 +54,9 @@ const Header = ({loggedIn}) => {
                     : 'header__list header__list_logged-in header__list_hidden'}>
                     <li  className={'header__item header__item_main'}>
                         <Link to={'/'}
-                              className={`header__link link button`}>
+                              className={`header__link link button ${pathname === '/'
+                                  ? 'header__link_active'
+                                  : 'header__link_secondary'}`}>
                             Главная
                         </Link>
                     </li>
@@ -84,7 +92,6 @@ const Header = ({loggedIn}) => {
                     checked={menuOpened}
                     onChange={() => {
                         setMenuOpened(!menuOpened)
-                        console.log(menuOpened)
                     }}/>
                 <label htmlFor={'menu_checkbox'} className={'header__burger-label'}>
                     <div/>

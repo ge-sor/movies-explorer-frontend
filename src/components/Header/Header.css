@@ -149,8 +149,6 @@
        margin-top: auto;
     }
     .header__list_logged-in {
-        font-size: 18px;
-        line-height: 22px;
         position: fixed;
         padding: 160px 0 90px;
         top: 0;
@@ -159,7 +157,6 @@
         background: #202020;
         width: 520px;
         flex-direction: column;
-
         align-items: center;
         gap: 28px;
         box-sizing: border-box;
@@ -182,6 +179,22 @@
     .header__logo-link {
         margin-right: 0;
     }
+    .header__link_active {
+
+        padding-bottom: 4px;
+        border-bottom: 2px solid #fff;
+    }
+
+    .header__link_secondary {
+
+
+    }
+    .header__link {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -195,5 +208,17 @@
     .header__link_primary {
         padding: 5px 12px;
     }
-
+    .header__list_logged-in {
+        padding: 160px 0 90px;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: #202020;
+        left: 0;
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+        gap: 24px;
+        box-sizing: border-box;
+    }
 }
