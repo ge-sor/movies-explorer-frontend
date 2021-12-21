@@ -22,7 +22,7 @@ const Profile = () => {
     return <section className={'profile section'}>
         <Header/>
         <div className={'profile__content content'}>
-            <h1 className={'profile__title'}>Привет, {initialUser.name}</h1>
+            <h1 className={'profile__title'}>Привет, {initialUser.name}!</h1>
             <form className={'profile__form'}>
                 <div className={'profile__form-block'}>
                 <input onChange={e => {

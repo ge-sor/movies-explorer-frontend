@@ -180,16 +180,22 @@
         margin-right: 0;
     }
     .header__link_active {
-
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
         padding-bottom: 4px;
         border-bottom: 2px solid #fff;
     }
 
     .header__link_secondary {
-
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
 
     }
-    .header__link {
+    .header__link_account {
         font-style: normal;
         font-weight: 500;
         font-size: 18px;

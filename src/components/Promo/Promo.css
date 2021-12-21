@@ -58,7 +58,7 @@
 @media screen and (max-width: 1280px) {
     .promo__content {
         align-items: center;
-        padding-top: 214px;
+        padding: 214px 70px 75px;
     }
     .promo__text {
         align-items: center;
@@ -88,7 +88,7 @@
 
 @media screen and (max-width: 768px) {
     .promo__content {
-        padding-top: 144px;
+        padding: 144px 10px 30px;
     }
 
     .promo__title {

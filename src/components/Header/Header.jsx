@@ -6,50 +6,39 @@ import {Link, useLocation} from "react-router-dom";
 const Header = ({loggedIn}) => {
 
     const {pathname} = useLocation()
-
     const [menuOpened, setMenuOpened] = useState(false)
-
-    function useClickOutside(ref) {
-        useEffect(() => {
-            function handleClickOutside(event) {
-                if (!ref.current.contains(event.target) && menuOpened) {
-                    console.log(1)
-                    setMenuOpened(false);
-                }
-            }
-            document.addEventListener("mousedown", handleClickOutside);
-            return () => {
-                document.removeEventListener("mousedown", handleClickOutside);
-            };
-        }, [ref]);
-    }
-
-    const wrapperRef = useRef(null);
-    useClickOutside(wrapperRef);
 
     useEffect(() => {
         function handleResize() {
-            console.log(document.body.clientWidth)
-            if (document.body.clientWidth > 1280 && menuOpened) {
+            if (window.innerWidth > 1280 && menuOpened) {
                 setMenuOpened(false);
             }
         }
-        document.addEventListener("resize", handleResize);
+        window.addEventListener("resize", handleResize);
         return () => {
-            document.removeEventListener("resize", handleResize);
+            window.removeEventListener("resize", handleResize);
         };
     }, [menuOpened]);
 
     useEffect(() => {
-        console.log(menuOpened)
+        function handleClickOutside(event) {
+            if (menuOpened && event.target.classList.contains('header_opened')) {
+                setMenuOpened(false);
+            }
+        }
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
     }, [menuOpened]);
+
 
     return <nav className={menuOpened ? 'header header_opened' : 'header'}>
         <Link to={'/'} className={'header__logo-link'}>
             <img className={'header__logo button'} alt={'Logo'} src={Logo}/>
         </Link>
         {loggedIn ? <>
-                <ul ref={wrapperRef}  className={menuOpened
+                <ul className={menuOpened
                     ? 'header__list header__list_logged-in header__list_visible'
                     : 'header__list header__list_logged-in header__list_hidden'}>
                     <li  className={'header__item header__item_main'}>
