@@ -1,4 +1,3 @@
-
 .techs {
     background: #272727;
 }
@@ -67,6 +66,7 @@
         height: 57px;
         width: 84px;
     }
+
     .techs__content {
         padding: 90px 50px;
     }
@@ -77,19 +77,24 @@
     .techs {
         background: #202020;
     }
+
     .techs__content {
         padding: 70px 18px;
     }
+
     .techs__title {
         border-bottom: 1px solid #000;
     }
+
     .techs__row {
         flex-wrap: wrap;
         justify-content: center;
     }
+
     .techs__head {
         padding-top: 60px;
     }
+
     .techs__row {
         padding-top: 50px;
     }

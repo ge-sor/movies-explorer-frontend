@@ -104,5 +104,20 @@
 
     }
 
+    .profile__content {
+        padding: 148px 0 0;
+    }
+
+    .profile__form {
+        width: 260px;
+    }
+
+    .profile__title {
+        padding-bottom: 80px;
+    }
+
+    .profile__button_submit {
+        margin: 380px 0 16px;
+    }
 }
 

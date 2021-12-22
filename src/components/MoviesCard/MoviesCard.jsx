@@ -17,15 +17,15 @@ const MoviesCard = ({title, length, image, deletable, handleDeleteCard}) => {
             </span>
             {deletable
                 ? <img height={'14px'} width={'12px'}
-                       className={'movies__toggle button'}
+                       className={'movies-card__toggle button'}
                        src={Cross}
                        alt={'delete card'}
                        onClick={() => handleDeleteCard()}/>
                 : <img height={'14px'} width={'12px'}
-                  className={'movies__toggle button'}
-                  src={like ? LikeOn : LikeOff}
-                  alt={'toggle'}
-                  onClick={() => setLike(!like)}/>}
+                       className={'movies-card__toggle button'}
+                       src={like ? LikeOn : LikeOff}
+                       alt={'toggle'}
+                       onClick={() => setLike(!like)}/>}
         </div>
         <img className={'movies-card__image'} alt={'poster'} src={image}/>
     </div>

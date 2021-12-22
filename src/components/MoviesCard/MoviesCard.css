@@ -50,8 +50,37 @@
 
 @media screen and (max-width: 768px) {
     .movies-card {
-
+        flex-direction: column-reverse;
+        position: relative;
+        padding: 0;
+        align-items: flex-start;
     }
 
+    .movies-card__toggle {
+        position: absolute;
+        bottom: 36px;
+        right: 16px;
+    }
+
+    .movies-card__image {
+        display: block;
+        object-fit: contain;
+        max-height: initial;
+        max-width: 100%;
+    }
+
+    .movies-card__info {
+        flex-direction: column;
+        padding: 14px 12px;
+    }
+
+    .movies-card__span {
+        margin-bottom: 0;
+    }
+
+    .movies-card__title {
+        font-size: 12px;
+        line-height: 15px;
+    }
 }
 

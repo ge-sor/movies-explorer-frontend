@@ -1,82 +1,87 @@
+.movies {
+    background: #202020;
+}
 
-    .movies {
-        background: #202020;
-    }
-    .movies__content {
-        padding: 140px 70px 0;
-    }
-    .movies__search-container {
+.movies__content {
+    padding: 140px 70px 0;
+}
 
-    }
-    .movies__form {
-        height: 72px;
-        margin: 0 0 70px 0;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        background: #222222;
-        box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
-        border-radius: 9px;
-    }
-    .movies__input {
-        width: 80%;
-        height: 100%;
-        padding-left: 63px;
-        background: url("../../images/search.svg") no-repeat top 19px left 19px;
-        border: none;
-        color: #fff;
-    }
-    .movies__input:focus {
-        outline: none;
-    }
+.movies__search-container {
 
-    .movies__search-button {
-        background: #4285F4;
-        border-radius: 48px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 8px 10px;
-        border: none;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 11px;
-        line-height: 18px;
-        color: #fff;
-        margin: 0 19px;
-    }
-    .movies__toggle-container {
-        display: flex;
-        align-items: center;
-        padding-left: 29px;
-        border-left: 1px solid #505050;
-        box-sizing: border-box;
-        height: 40px;
-    }
-    .movies__toggle {
+}
 
-    }
-    .movies__toggle-span {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 13px;
-        line-height: 18px;
-        margin: 0 30px 0 14px;
-    }
+.movies__form {
+    height: 72px;
+    margin: 0 0 70px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #222222;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
+    border-radius: 9px;
+}
 
+.movies__input {
+    width: 80%;
+    height: 100%;
+    padding-left: 63px;
+    background: url("../../images/search.svg") no-repeat top 19px left 19px;
+    border: none;
+    color: #fff;
+}
+
+.movies__input:focus {
+    outline: none;
+}
+
+.movies__search-button {
+    background: #4285F4;
+    border-radius: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 10px;
+    border: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 18px;
+    color: #fff;
+    margin: 0 19px;
+}
+
+.movies__toggle-container {
+    display: flex;
+    align-items: center;
+    padding-left: 29px;
+    border-left: 1px solid #505050;
+    box-sizing: border-box;
+    height: 40px;
+}
+
+.movies__toggle-span {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0 30px 0 14px;
+}
 
 
 @media screen and (max-width: 1280px) {
     .movies {
 
     }
+
     .movies__toggle-container {
         padding-left: 19px;
     }
+
     .movies__form {
         margin: 0 0 110px 0;
     }
+
     .movies__content {
         padding: 140px 30px 0;
     }
@@ -86,28 +91,41 @@
     .movies {
 
     }
+
     .movies__content {
         padding: 140px 10px 0;
     }
+
     .movies__form {
         position: relative;
     }
+
     .movies__search-button {
         position: absolute;
         right: 0;
     }
+
     .movies__toggle-container {
         position: absolute;
-        top: 70px;
-        left: 20vw;
+        top: 100px;
+        left: 0;
+        right: 0;
         border: none;
-        padding: 0;
+        padding: 0 120px 0 0;
+        justify-content: center;
+        z-index: 2;
     }
+
     .movies__toggle-span {
         position: absolute;
-        top: 80px;
-        left: 40vw;
+        top: 110px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding-left: 90px;
+        z-index: 1;
     }
+
     .movies__input {
         width: 65%;
         height: 100%;
@@ -116,6 +134,7 @@
         border: none;
         color: #fff;
     }
+
     .movies__input::placeholder {
         font-size: 14px;
         line-height: 20px;

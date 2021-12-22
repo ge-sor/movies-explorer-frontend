@@ -4,7 +4,6 @@ import myPhoto from '../../images/my-photo.jpg'
 const AboutMe = () => {
     return <section className={'about-me section'}>
         <div className={'about-me__content content'}>
-
             <h3 className={'about-me__title title'}>
                 Студент
             </h3>
@@ -25,20 +24,23 @@ const AboutMe = () => {
                         Fusce interdum sagittis rhoncus.
                     </p>
                     <div className={'about-me__links'}>
-                        <a href={'https://www.facebook.com/gesrr'} className={'about-me__link link'} rel="noreferrer" target="_blank">
+                        <a href={'https://www.facebook.com/gesrr'}
+                           className={'about-me__link link'}
+                           rel="noreferrer"
+                           target="_blank">
                             Facebook
                         </a>
-                        <a href={'https://github.com/ge-sor'} className={'about-me__link link'} rel="noreferrer" target="_blank">
+                        <a href={'https://github.com/ge-sor'}
+                           className={'about-me__link link'}
+                           rel="noreferrer"
+                           target="_blank">
                             Github
                         </a>
                     </div>
                 </div>
                 <img className={'about-me__photo'} alt={'avatar'} src={myPhoto}/>
             </div>
-
-
         </div>
-
     </section>
 }
 export default AboutMe

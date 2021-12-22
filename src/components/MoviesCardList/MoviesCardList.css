@@ -1,4 +1,3 @@
-
 .movies-card-list {
     background: #202020;
 }
@@ -44,5 +43,8 @@
 
     }
 
+    .movies-card-list__button {
+        width: 240px;
+    }
 }
 

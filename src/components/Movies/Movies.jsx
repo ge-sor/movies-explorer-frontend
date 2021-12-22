@@ -40,7 +40,7 @@ const Movies = ({isSavedMovies}) => {
     ]
 
     return <>
-        <Header/>
+        <Header loggedIn={true}/>
         <section className={'movies section'}>
             <div className={'movies__content content'}>
                 <div className={'movies__search-container'}>

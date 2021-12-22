@@ -2,7 +2,7 @@ import React from 'react'
 
 const Techs = () => {
 
-    const techs = ['HTML','CSS','JS','React','Git','Express.js','mongoDB']
+    const techs = ['HTML', 'CSS', 'JS', 'React', 'Git', 'Express.js', 'mongoDB']
 
     return <section className={'techs section'}>
         <div className={'techs__content content'}>

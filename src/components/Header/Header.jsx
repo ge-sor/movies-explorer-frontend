@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react'
+import React, {useEffect, useState} from 'react'
 import Logo from '../../images/logo.svg'
 import Person from '../../images/person.svg'
 import {Link, useLocation} from "react-router-dom";
@@ -14,6 +14,7 @@ const Header = ({loggedIn}) => {
                 setMenuOpened(false);
             }
         }
+
         window.addEventListener("resize", handleResize);
         return () => {
             window.removeEventListener("resize", handleResize);
@@ -26,6 +27,7 @@ const Header = ({loggedIn}) => {
                 setMenuOpened(false);
             }
         }
+
         document.addEventListener("mousedown", handleClickOutside);
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
@@ -41,7 +43,7 @@ const Header = ({loggedIn}) => {
                 <ul className={menuOpened
                     ? 'header__list header__list_logged-in header__list_visible'
                     : 'header__list header__list_logged-in header__list_hidden'}>
-                    <li  className={'header__item header__item_main'}>
+                    <li className={'header__item header__item_main'}>
                         <Link to={'/'}
                               className={`header__link link button ${pathname === '/'
                                   ? 'header__link_active'
@@ -49,7 +51,7 @@ const Header = ({loggedIn}) => {
                             Главная
                         </Link>
                     </li>
-                    <li  className={'header__item'}>
+                    <li className={'header__item'}>
                         <Link to={'/movies'}
                               className={`header__link link button ${pathname === '/movies'
                                   ? 'header__link_active'
@@ -104,8 +106,6 @@ const Header = ({loggedIn}) => {
                     </Link>
                 </li>
             </ul>}
-
-
 
 
     </nav>
