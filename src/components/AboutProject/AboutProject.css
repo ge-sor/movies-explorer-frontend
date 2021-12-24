@@ -1,0 +1,155 @@
+.about-project {
+    background: #202020;
+}
+
+.about-project__content {
+    padding: 110px 70px;
+}
+
+.about-project__title {
+
+}
+
+.about-project__texts {
+    display: flex;
+    flex-direction: row;
+    padding-top: 70px;
+    justify-content: space-between;
+}
+
+.about-project__text-container {
+    width: 48%;
+
+}
+
+.about-project__subtitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+    margin: 0;
+
+}
+
+.about-project__paragraph {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    padding-top: 26px;
+}
+
+.about-project__progress {
+    padding-top: 110px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.about-project__progress-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-project__progress-block_backend {
+    width: 25%;
+}
+
+.about-project__progress-block_frontend {
+    width: 75%;
+}
+
+.about-project__progress-weeks_backend {
+    color: #000;
+    background: #3DDC84;
+}
+
+.about-project__progress-weeks_frontend {
+    background: #303030;
+}
+
+.about-project__progress-weeks {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 0;
+    width: 100%;
+}
+
+.about-project__progress-description {
+    padding-top: 14px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #8B8B8B;
+}
+
+@media screen and (max-width: 1280px) {
+    .about-project {
+
+    }
+
+    .about-project__content {
+        padding: 90px 50px;
+    }
+
+    .about-project__paragraph {
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-project {
+
+    }
+
+    .about-project__content {
+        padding: 70px 18px;
+    }
+
+    .about-project__texts {
+        display: flex;
+        flex-direction: column;
+        padding-top: 70px;
+        gap: 56px;
+    }
+
+    .about-project__text-container {
+        width: 100%;
+    }
+
+    .about-project__subtitle {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .about-project__paragraph {
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .about-project__progress {
+        padding-top: 60px;
+    }
+
+    .about-project__progress-weeks {
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+    .about-project__progress-description {
+        font-size: 11px;
+        line-height: 13px;
+        padding-top: 10px;
+    }
+}
+

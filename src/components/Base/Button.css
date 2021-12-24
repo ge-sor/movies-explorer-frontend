@@ -1,0 +1,12 @@
+.button {
+    cursor: pointer;
+    user-select: none;
+}
+
+.button:hover {
+    filter: opacity(.8);
+}
+
+.button:active {
+    filter: opacity(.7);
+}
