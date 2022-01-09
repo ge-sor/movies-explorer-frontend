@@ -53,7 +53,7 @@ const Movies = ({isSavedMovies}) => {
 
             }
         }
-    }, [movies, savedMovies])
+    }, [movies, savedMovies, isSavedMovies])
 
     const handleShorts = () => {
         if (addShorts) {

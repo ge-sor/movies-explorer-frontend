@@ -51,16 +51,16 @@ const MoviesCardList = ({deletable, cards}) => {
                                 }).catch(err => console.log(err))
                             }).catch(err => console.log(err))
                             : createMovie({
-                            country: card.country || 'отсутствует',
-                            director: card.director,
-                            duration: card.duration,
-                            year: card.year,
-                            description: card.description,
+                            country: card.country || ' ',
+                            director: card.director || ' ',
+                            duration: card.duration || 0,
+                            year: card.year || ' ',
+                            description: card.description || ' ',
                             image: card.image,
                             trailer: card.trailer,
                             thumbnail: card.thumbnail,
-                            nameRU: card.nameRU,
-                            nameEN: card.nameEN,
+                            nameRU: card.nameRU || ' ',
+                            nameEN: card.nameEN || ' ',
                             movieId: card.movieId,
                         }).then(() => {
                                 getSavedMovies().then(res => {
