@@ -43,7 +43,11 @@ const MoviesCardList = ({deletable, cards}) => {
                     deletable={deletable}
                     liked={savedMovies.find(i => i.movieId === card.movieId)}
                     handleLikeCard={() => {
-                        createMovie({
+                        savedMovies.find(i => i.movieId === card.movieId)
+                            ? deleteMovie(savedMovies.find(i => i.movieId === card.movieId)._id).then(() => {
+                                dispatch(removeMovie(savedMovies.find(i => i.movieId === card.movieId)._id))
+                            }).catch(err => console.log(err))
+                            : createMovie({
                             country: card.country || 'отсутствует',
                             director: card.director,
                             duration: card.duration,

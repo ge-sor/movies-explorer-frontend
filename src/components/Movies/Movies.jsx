@@ -57,6 +57,7 @@ const Movies = ({isSavedMovies}) => {
     }
 
     useEffect(() => {
+        setIsFetching(true)
         getMovies().then(res => {
             setIsFetching(false)
             dispatch(setMovies(res.map(card => {
@@ -82,7 +83,7 @@ const Movies = ({isSavedMovies}) => {
         getSavedMovies().then(res => {
             dispatch(setSavedMovies(res.data))
         }).catch(err => console.log(err))
-    }, [])
+    }, [isSavedMovies])
 
     return <>
         <Header/>
