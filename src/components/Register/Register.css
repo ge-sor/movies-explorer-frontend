@@ -55,10 +55,42 @@
     transform: translateY(-20px);
 }
 
+.register__input-active {
+    font-size: 10px;
+    transform: translateY(-20px);
+}
+
 .register__input-container {
     display: flex;
     position: relative;
     width: 100%;
+}
+
+.register__input-container span {
+    font-size: 11px;
+    line-height: 13px;
+    color: #EE3465;
+    display: block;
+    position: absolute;
+    left: 50px;
+    top: -15px;
+}
+
+.register__name-error {
+
+}
+
+.register__password-error {
+
+}
+
+.register__email-error {
+
+}
+
+.register__server-error {
+    top: 65px !important;
+    left: 0 !important;
 }
 
 .register__input_email {
@@ -92,6 +124,11 @@
     margin: 152px 0 31px;
     border: none;
     color: #fff;
+}
+
+.register__submit-disabled {
+    background: #707070;
+    pointer-events: none;
 }
 
 .register__login-container {

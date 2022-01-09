@@ -27,6 +27,12 @@
     margin: 20px 0 80px;
 }
 
+.movies-card-list__not-found {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+}
 
 @media screen and (max-width: 1280px) {
     .movies-card-list {

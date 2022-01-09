@@ -59,6 +59,26 @@
 
 }
 
+.profile__form-block span {
+    font-size: 11px;
+    line-height: 13px;
+    color: #EE3465;
+    display: block;
+    position: absolute;
+    right: 0;
+}
+
+.profile__name-error {
+    top: -5px;
+}
+
+.profile__email-error {
+    bottom: -5px;
+}
+
+.profile__server-error {
+    bottom: -25px;
+}
 
 .profile__input_name {
 
@@ -82,6 +102,13 @@
     margin: 200px 0 16px;
     font-weight: normal;
     color: #fff;
+}
+
+.profile__button_submit-disabled {
+    margin: 200px 0 16px;
+    font-weight: normal;
+    color: #707070;
+    pointer-events: none;
 }
 
 .profile__button_logout {

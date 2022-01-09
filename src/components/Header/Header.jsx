@@ -2,11 +2,15 @@ import React, {useEffect, useState} from 'react'
 import Logo from '../../images/logo.svg'
 import Person from '../../images/person.svg'
 import {Link, useLocation} from "react-router-dom";
+import {useSelector} from "react-redux";
 
-const Header = ({loggedIn}) => {
+const Header = () => {
+
+    const {loggedIn} = useSelector((state) => state.explorer)
 
     const {pathname} = useLocation()
     const [menuOpened, setMenuOpened] = useState(false)
+
 
     useEffect(() => {
         function handleResize() {
@@ -44,31 +48,38 @@ const Header = ({loggedIn}) => {
                     ? 'header__list header__list_logged-in header__list_visible'
                     : 'header__list header__list_logged-in header__list_hidden'}>
                     <li className={'header__item header__item_main'}>
-                        <Link to={'/'}
-                              className={`header__link link button ${pathname === '/'
-                                  ? 'header__link_active'
-                                  : 'header__link_secondary'}`}>
+                        <Link
+                            onClick={() => setMenuOpened(false)}
+                            to={'/'}
+                            className={`header__link link button ${pathname === '/'
+                                ? 'header__link_active'
+                                : 'header__link_secondary'}`}>
                             Главная
                         </Link>
                     </li>
                     <li className={'header__item'}>
-                        <Link to={'/movies'}
-                              className={`header__link link button ${pathname === '/movies'
-                                  ? 'header__link_active'
-                                  : 'header__link_secondary'}`}>
+                        <Link
+                            onClick={() => setMenuOpened(false)}
+                            to={'/movies'}
+                            className={`header__link link button ${pathname === '/movies'
+                                ? 'header__link_active'
+                                : 'header__link_secondary'}`}>
                             Фильмы
                         </Link>
                     </li>
                     <li className={'header__item'}>
-                        <Link to={'/saved-movies'}
-                              className={`header__link link button ${pathname === '/saved-movies'
-                                  ? 'header__link_active'
-                                  : 'header__link_secondary'}`}>
+                        <Link
+                            onClick={() => setMenuOpened(false)}
+                            to={'/saved-movies'}
+                            className={`header__link link button ${pathname === '/saved-movies'
+                                ? 'header__link_active'
+                                : 'header__link_secondary'}`}>
                             Сохранённые фильмы
                         </Link>
                     </li>
                     <li className={'header__item'}>
                         <Link
+                            onClick={() => setMenuOpened(false)}
                             to={'/profile'}
                             className={'header__link header__link_account link button'}>
                             Аккаунт
@@ -93,14 +104,16 @@ const Header = ({loggedIn}) => {
             <ul className={'header__list header__list_logged-out'}>
                 <li className={'header__item'}>
                     <Link
-                        to={'/signup'}
+                        onClick={() => setMenuOpened(false)}
+                        to={'/register'}
                         className={'header__link link button'}>
                         Регистрация
                     </Link>
                 </li>
                 <li className={'header__item'}>
                     <Link
-                        to={'/signin'}
+                        onClick={() => setMenuOpened(false)}
+                        to={'/login'}
                         className={'header__link header__link_primary link button'}>
                         Войти
                     </Link>
