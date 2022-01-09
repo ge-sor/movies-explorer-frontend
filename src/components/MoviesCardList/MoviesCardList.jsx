@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import MoviesCard from "../MoviesCard/MoviesCard";
 import {createMovie, deleteMovie, getSavedMovies} from "../../utils/MainApi";
 import {useDispatch, useSelector} from "react-redux";
-import {addMovie, removeMovie, setSavedMovies} from "../../store/slice";
+import {removeMovie, setSavedMovies} from "../../store/slice";
 
 const MoviesCardList = ({deletable, cards}) => {
 
@@ -46,6 +46,9 @@ const MoviesCardList = ({deletable, cards}) => {
                         savedMovies.filter(i => i.owner === user.id).find(i => i.movieId === card.movieId)
                             ? deleteMovie(savedMovies.filter(i => i.owner === user.id).find(i => i.movieId === card.movieId)._id).then(() => {
                                 dispatch(removeMovie(savedMovies.filter(i => i.owner === user.id).find(i => i.movieId === card.movieId)._id))
+                                getSavedMovies().then(res => {
+                                    dispatch(setSavedMovies(res.data))
+                                }).catch(err => console.log(err))
                             }).catch(err => console.log(err))
                             : createMovie({
                             country: card.country || 'отсутствует',
@@ -68,6 +71,9 @@ const MoviesCardList = ({deletable, cards}) => {
                     handleDeleteCard={() => {
                         deleteMovie(card._id).then(() => {
                             dispatch(removeMovie(card._id))
+                            getSavedMovies().then(res => {
+                                dispatch(setSavedMovies(res.data))
+                            }).catch(err => console.log(err))
                         }).catch(err => console.log(err))
                     }
                     }/>

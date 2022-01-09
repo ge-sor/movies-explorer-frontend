@@ -53,7 +53,7 @@ const Profile = () => {
             email: ''
         }))
         dispatch(setLoggedIn(false))
-        localStorage.removeItem('token')
+        localStorage.clear()
         navigate('/')
     }
 
@@ -94,7 +94,8 @@ const Profile = () => {
                     }} id={'profile__input_email'}
                            value={newUser.email}
                            type={'email'}
-                           required={true}
+                           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                           required
                            className={'profile__input profile__input_email'}/>
                     <label htmlFor={'profile__input_email'} className={'profile__label'}>
                         E-mail

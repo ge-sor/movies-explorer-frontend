@@ -10,6 +10,7 @@ import {setLoggedIn, setUser} from "../../store/slice";
 import {useDispatch} from "react-redux";
 import {getUser} from "../../utils/MainApi";
 import {PrivateRoute} from "../PrivateRoute/PrivateRoute";
+import {PrivateLoggedRoute} from "../PrivateRoute/PrivateLoggedRoute";
 
 const App = () => {
 
@@ -41,10 +42,13 @@ const App = () => {
         <Routes>
             <Route exact path='/' element={<Main/>}/>
 
-            <Route exact path='/register' element={<Register/>}/>
+            <Route exact path='/register' element={<PrivateLoggedRoute/>}>
+                <Route exact path='/register' element={<Register/>}/>
+            </Route>
 
-            <Route exact path='/login' element={<Login/>}/>
-
+            <Route exact path='/login' element={<PrivateLoggedRoute/>}>
+                <Route exact path='/login' element={<Login/>}/>
+            </Route>
 
             <Route exact path='/profile' element={<PrivateRoute/>}>
                 <Route exact path='/profile' element={<Profile/>}/>

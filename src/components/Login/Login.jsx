@@ -72,6 +72,7 @@ const Login = () => {
                         id={'login__input_email'}
                         autoComplete={"new-email"}
                         type={'email'}
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                         required
                         className={'login__input login__input_email'}/>
                     <label

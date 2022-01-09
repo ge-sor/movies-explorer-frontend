@@ -1,12 +1,14 @@
 import React, {useState} from 'react'
 import {Link, useNavigate} from "react-router-dom";
 import Logo from "../../images/logo.svg";
-import {register} from "../../utils/MainApi";
+import {getUser, login, register} from "../../utils/MainApi";
+import {setLoggedIn, setUser} from "../../store/slice";
+import {useDispatch} from "react-redux";
 
 const Register = () => {
 
     const navigate = useNavigate();
-
+    const dispatch = useDispatch()
     const [emailError, setEmailError] = useState('')
     const [nameError, setNameError] = useState('')
     const [passwordError, setPasswordError] = useState('')
@@ -14,13 +16,43 @@ const Register = () => {
 
     const handleFormSubmit = (e) => {
         e.preventDefault()
+
         setServerError('')
         register({
             name: currentUser.name,
             email: currentUser.email,
             password: currentUser.password
         }).then(() => {
-            navigate('/login')
+            login({
+                email: currentUser.email,
+                password: currentUser.password
+            }).then(res => {
+                localStorage.setItem('token', res.token)
+                getUser()
+                    .then(res => {
+                        dispatch(setUser({
+                            name: res.name,
+                            email: res.email,
+                            id: res.id
+                        }))
+                        dispatch(setLoggedIn(true))
+                        navigate('/movies')
+                    })
+                    .catch(err => {
+                        localStorage.removeItem('token')
+                        dispatch(setLoggedIn(false))
+                    })
+            }).catch(err => {
+                if (err.includes('401')) {
+                    setServerError('Неправильная почта или пароль.')
+                    return
+                }
+                if (err.includes('400')) {
+                    setServerError('Неверный формат данных. Попробуйте еще раз.')
+                } else {
+                    setServerError('Ошибка сервера. Попробуйте еще раз.')
+                }
+            })
         }).catch(err => {
             if (err.includes('409')) {
                 setServerError('Данный E-mail уже зарегистрирован.')
@@ -80,6 +112,7 @@ const Register = () => {
                         id={'register__input_email'}
                         autoComplete={"new-email"}
                         type={'email'}
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                         required
                         className={'register__input register__input_email'}/>
                     <label

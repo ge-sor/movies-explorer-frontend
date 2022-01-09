@@ -22,38 +22,67 @@ const Movies = ({isSavedMovies}) => {
     const [isFetching, setIsFetching] = useState(true)
 
     useEffect(() => {
-        setFilteredMovies(movies.filter(i => i.duration > 40))
-        setAddShorts(false)
-        setSearchValue('')
-    }, [movies, isSavedMovies])
 
-    useEffect(() => {
-        setFilteredSavedMovies(savedMovies.filter(i => i.duration > 40))
-        setAddShorts(false)
-        setSearchValue('')
-    }, [savedMovies, isSavedMovies])
+        setFilteredMovies(movies)
+        setFilteredSavedMovies(savedMovies)
+
+        if (localStorage.getItem('search')) {
+
+            setSearchValue(localStorage.getItem('search'))
+            if (addShorts) {
+                isSavedMovies
+                    ? setFilteredSavedMovies(savedMovies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())).filter(i => i.duration < 41))
+                    : setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())).filter(i => i.duration < 41))
+            } else {
+                isSavedMovies
+                    ? setFilteredSavedMovies(savedMovies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())))
+                    : setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())))
+            }
+        }
+        if (localStorage.getItem('shorts')) {
+            if (localStorage.getItem('shorts') === '1') {
+                setAddShorts(true)
+                isSavedMovies
+                    ? setFilteredSavedMovies(savedMovies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())).filter(i => i.duration < 41))
+                    : setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())).filter(i => i.duration < 41))
+            } else {
+                setAddShorts(false)
+                isSavedMovies
+                    ? setFilteredSavedMovies(savedMovies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())))
+                    : setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())))
+
+            }
+        }
+    }, [movies, savedMovies])
 
     const handleShorts = () => {
-
         if (addShorts) {
             setAddShorts(false)
-            isSavedMovies
-                ? setFilteredSavedMovies(filteredSavedMovies.filter(i => i.duration > 40))
-                : setFilteredMovies(filteredMovies.filter(i => i.duration > 40))
-        } else {
-            setAddShorts(true)
+            localStorage.setItem('shorts', '0')
             isSavedMovies
                 ? setFilteredSavedMovies(savedMovies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())))
                 : setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())))
-
+        } else {
+            setAddShorts(true)
+            localStorage.setItem('shorts', '1')
+            isSavedMovies
+                ? setFilteredSavedMovies(savedMovies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())).filter(i => i.duration < 41))
+                : setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())).filter(i => i.duration < 41))
         }
     }
 
     const handleFormSubmit = (e) => {
         e.preventDefault()
-        isSavedMovies
-            ? setFilteredSavedMovies(savedMovies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())))
-            : setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())))
+        localStorage.setItem('search', searchValue)
+        if (addShorts) {
+            isSavedMovies
+                ? setFilteredSavedMovies(savedMovies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())).filter(i => i.duration < 41))
+                : setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())).filter(i => i.duration < 41))
+        } else {
+            isSavedMovies
+                ? setFilteredSavedMovies(savedMovies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())))
+                : setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())))
+        }
     }
 
     useEffect(() => {
@@ -83,7 +112,7 @@ const Movies = ({isSavedMovies}) => {
         getSavedMovies().then(res => {
             dispatch(setSavedMovies(res.data))
         }).catch(err => console.log(err))
-    }, [isSavedMovies])
+    }, [])
 
     return <>
         <Header/>
