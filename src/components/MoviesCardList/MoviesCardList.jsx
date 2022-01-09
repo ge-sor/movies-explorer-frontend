@@ -1,13 +1,13 @@
 import React, {useEffect, useState} from 'react'
 import MoviesCard from "../MoviesCard/MoviesCard";
-import {createMovie, deleteMovie} from "../../utils/MainApi";
+import {createMovie, deleteMovie, getSavedMovies} from "../../utils/MainApi";
 import {useDispatch, useSelector} from "react-redux";
-import {addMovie, removeMovie} from "../../store/slice";
+import {addMovie, removeMovie, setSavedMovies} from "../../store/slice";
 
 const MoviesCardList = ({deletable, cards}) => {
 
     const dispatch = useDispatch()
-    const {savedMovies} = useSelector((state) => state.explorer)
+    const {savedMovies, user} = useSelector((state) => state.explorer)
     const timeFormat = (min) => {
         if (+min < 59) {
             return +min + ' мин'
@@ -41,11 +41,11 @@ const MoviesCardList = ({deletable, cards}) => {
                     title={card.nameRU}
                     length={timeFormat(card.duration)}
                     deletable={deletable}
-                    liked={savedMovies.find(i => i.movieId === card.movieId)}
+                    liked={savedMovies.filter(i => i.owner === user.id).find(i => i.movieId === card.movieId)}
                     handleLikeCard={() => {
-                        savedMovies.find(i => i.movieId === card.movieId)
-                            ? deleteMovie(savedMovies.find(i => i.movieId === card.movieId)._id).then(() => {
-                                dispatch(removeMovie(savedMovies.find(i => i.movieId === card.movieId)._id))
+                        savedMovies.filter(i => i.owner === user.id).find(i => i.movieId === card.movieId)
+                            ? deleteMovie(savedMovies.filter(i => i.owner === user.id).find(i => i.movieId === card.movieId)._id).then(() => {
+                                dispatch(removeMovie(savedMovies.filter(i => i.owner === user.id).find(i => i.movieId === card.movieId)._id))
                             }).catch(err => console.log(err))
                             : createMovie({
                             country: card.country || 'отсутствует',
@@ -60,19 +60,9 @@ const MoviesCardList = ({deletable, cards}) => {
                             nameEN: card.nameEN,
                             movieId: card.movieId,
                         }).then(() => {
-                            dispatch(addMovie({
-                                country: card.country,
-                                director: card.director,
-                                duration: card.duration,
-                                year: card.year,
-                                description: card.description,
-                                image: card.image,
-                                trailer: card.trailer,
-                                thumbnail: card.thumbnail,
-                                nameRU: card.nameRU,
-                                nameEN: card.nameEN,
-                                movieId: card.movieId,
-                            }))
+                                getSavedMovies().then(res => {
+                                    dispatch(setSavedMovies(res.data))
+                                }).catch(err => console.log(err))
                         }).catch(err => console.log(err))
                     }}
                     handleDeleteCard={() => {
