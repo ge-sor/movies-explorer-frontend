@@ -22,35 +22,48 @@ const Movies = ({isSavedMovies}) => {
     const [isFetching, setIsFetching] = useState(true)
 
     useEffect(() => {
-
         setFilteredMovies(movies)
         setFilteredSavedMovies(savedMovies)
-
-        if (localStorage.getItem('search')) {
-
-            setSearchValue(localStorage.getItem('search'))
+        const localSearch = localStorage.getItem('search').toLowerCase()
+        const localShorts = localStorage.getItem('shorts')
+        if (localSearch) {
             if (addShorts) {
-                isSavedMovies
-                    ? setFilteredSavedMovies(savedMovies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())).filter(i => i.duration < 41))
-                    : setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())).filter(i => i.duration < 41))
+                if (isSavedMovies) {
+                    setSearchValue('')
+                } else {
+                    setSearchValue(localSearch)
+                    setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase().includes(localSearch.toLowerCase())).filter(i => i.duration < 41))
+                }
             } else {
-                isSavedMovies
-                    ? setFilteredSavedMovies(savedMovies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())))
-                    : setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())))
+                if (isSavedMovies) {
+                    setSearchValue('')
+                } else {
+                    setSearchValue(localSearch)
+                    setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase().includes(localSearch.toLowerCase())))
+                }
             }
         }
-        if (localStorage.getItem('shorts')) {
-            if (localStorage.getItem('shorts') === '1') {
-                setAddShorts(true)
-                isSavedMovies
-                    ? setFilteredSavedMovies(savedMovies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())).filter(i => i.duration < 41))
-                    : setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())).filter(i => i.duration < 41))
+        if (localShorts) {
+            if (localShorts === '1') {
+                if (isSavedMovies) {
+                    setAddShorts(false)
+                } else {
+                    setAddShorts(true)
+                    localSearch
+                        ? setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase()
+                            .includes(localSearch)).filter(i => i.duration < 41))
+                        : setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase()
+                            .includes(searchValue.toLowerCase())).filter(i => i.duration < 41))
+                }
             } else {
                 setAddShorts(false)
                 isSavedMovies
-                    ? setFilteredSavedMovies(savedMovies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())))
-                    : setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())))
-
+                    ? setFilteredSavedMovies(savedMovies)
+                    : localSearch
+                        ? setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase()
+                        .includes(localSearch)))
+                        : setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase()
+                            .includes(searchValue.toLowerCase())))
             }
         }
     }, [movies, savedMovies, isSavedMovies])
@@ -58,30 +71,40 @@ const Movies = ({isSavedMovies}) => {
     const handleShorts = () => {
         if (addShorts) {
             setAddShorts(false)
-            localStorage.setItem('shorts', '0')
-            isSavedMovies
-                ? setFilteredSavedMovies(savedMovies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())))
-                : setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())))
+            if (isSavedMovies) {
+                setFilteredSavedMovies(savedMovies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())))
+            } else {
+                setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())))
+                localStorage.setItem('shorts', '0')
+            }
         } else {
             setAddShorts(true)
-            localStorage.setItem('shorts', '1')
-            isSavedMovies
-                ? setFilteredSavedMovies(savedMovies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())).filter(i => i.duration < 41))
-                : setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())).filter(i => i.duration < 41))
+            if (isSavedMovies) {
+                setFilteredSavedMovies(savedMovies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())).filter(i => i.duration < 41))
+            } else {
+                setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())).filter(i => i.duration < 41))
+                localStorage.setItem('shorts', '1')
+            }
         }
     }
 
     const handleFormSubmit = (e) => {
         e.preventDefault()
-        localStorage.setItem('search', searchValue)
+
         if (addShorts) {
-            isSavedMovies
-                ? setFilteredSavedMovies(savedMovies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())).filter(i => i.duration < 41))
-                : setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())).filter(i => i.duration < 41))
+            if (isSavedMovies) {
+                setFilteredSavedMovies(savedMovies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())).filter(i => i.duration < 41))
+            } else {
+                setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())).filter(i => i.duration < 41))
+                localStorage.setItem('search', searchValue)
+            }
         } else {
-            isSavedMovies
-                ? setFilteredSavedMovies(savedMovies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())))
-                : setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())))
+            if (isSavedMovies) {
+                setFilteredSavedMovies(savedMovies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())))
+            } else {
+                setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase().includes(searchValue.toLowerCase())))
+                localStorage.setItem('search', searchValue)
+            }
         }
     }
 

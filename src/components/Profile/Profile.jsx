@@ -17,6 +17,7 @@ const Profile = () => {
     const [emailError, setEmailError] = useState('')
     const [nameError, setNameError] = useState('')
     const [serverError, setServerError] = useState('')
+    const [serverSuccess, setServerSuccess] = useState('')
     useEffect(() => {
         setNewUser({
             name: currentUser.name,
@@ -35,6 +36,8 @@ const Profile = () => {
                 name: newUser.name,
                 email: newUser.email
             }))
+            setServerSuccess('Профиль успешно обновлен!')
+            setTimeout(() => setServerSuccess(''), 5000)
 
         })
             .catch(err => {
@@ -102,10 +105,14 @@ const Profile = () => {
                     </label>
                     <span className={'profile__email-error'}>{emailError}</span>
                     <span className={'profile__server-error'}>{serverError}</span>
+                    <span className={'profile__server-success'}>{serverSuccess}</span>
                 </div>
                 <button type={'submit'}
                         onClick={handleFormSubmit}
-                        className={`button profile__button profile__button_submit ${(emailError || nameError) && 'profile__button_submit-disabled'}`}>
+                        className={`button profile__button profile__button_submit  ${
+                            (emailError || nameError || (currentUser.name === newUser.name && currentUser.email === newUser.email))
+                                ? 'profile__button_submit-disabled' 
+                                : ''}`}>
                     Редактировать
                 </button>
                 <button onClick={handleLogout}

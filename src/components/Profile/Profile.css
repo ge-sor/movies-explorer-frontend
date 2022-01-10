@@ -79,6 +79,14 @@
 .profile__server-error {
     bottom: -25px;
 }
+.profile__server-success {
+    bottom: -125px;
+    left: 0;
+    text-align: center;
+    color: #d3d3d3 !important;
+    font-size: 14px !important;
+    line-height: 16px !important;
+}
 
 .profile__input_name {
 
