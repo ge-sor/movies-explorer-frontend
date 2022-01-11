@@ -24,7 +24,7 @@ const Movies = ({isSavedMovies}) => {
     useEffect(() => {
         setFilteredMovies(movies)
         setFilteredSavedMovies(savedMovies)
-        const localSearch = localStorage.getItem('search').toLowerCase()
+        const localSearch = localStorage.getItem('search')
         const localShorts = localStorage.getItem('shorts')
         if (localSearch) {
             if (addShorts) {
@@ -51,7 +51,7 @@ const Movies = ({isSavedMovies}) => {
                     setAddShorts(true)
                     localSearch
                         ? setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase()
-                            .includes(localSearch)).filter(i => i.duration < 41))
+                            .includes(localSearch.toLowerCase())).filter(i => i.duration < 41))
                         : setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase()
                             .includes(searchValue.toLowerCase())).filter(i => i.duration < 41))
                 }
@@ -61,7 +61,7 @@ const Movies = ({isSavedMovies}) => {
                     ? setFilteredSavedMovies(savedMovies)
                     : localSearch
                         ? setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase()
-                        .includes(localSearch)))
+                        .includes(localSearch.toLowerCase())))
                         : setFilteredMovies(movies.filter(i => i.nameRU.toLowerCase()
                             .includes(searchValue.toLowerCase())))
             }
