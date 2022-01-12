@@ -4,8 +4,7 @@ const Footer = () => {
 
     const Year = () => {
         const today = new Date()
-        const year = today.getFullYear()
-        return year
+        return today.getFullYear()
     }
 
     return <section className={'footer section'}>

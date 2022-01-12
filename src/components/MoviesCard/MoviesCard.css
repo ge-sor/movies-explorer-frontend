@@ -67,6 +67,7 @@
         object-fit: contain;
         max-height: initial;
         max-width: 100%;
+        width: 100%;
     }
 
     .movies-card__info {
